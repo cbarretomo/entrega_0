@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "e79eb3c7-f18a-492b-964b-6855d55a6e35",
+		"name": "API Asignacion 0",
+		"description": "Esta es la documentación para probar el API para la asignacion 0, para todas las actividades es necesario autenticar el token y adicionalmente solo se muestra la información correspondiente al id generedo para el token, por ende los usuarios pueden ver únicamente su información.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32908738"
+	},
+	"item": [
+		{
+			"name": "Crear_usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_usuario\":\"Julian\",\r\n    \"contrasenia\" : \"1234\",\r\n    \"imagen_perfil\":\"path_imagen.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/usuarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios"
+					]
+				},
+				"description": "Se adiciona un usuario a el sistema"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_usuario Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_usuario\":\"Carlos\",\r\n    \"contrasenia\" : \"1234\",\r\n    \"imagen_perfil\":\"path_imagen.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/usuarios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios"
+					]
+				},
+				"description": "Se adiciona un usuario a el sistema"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_usuario\":\"Carlos\",\r\n    \"contrasenia\" : \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Este Post en el login nos permite obtner el token de autenticación, para poder realizar las siguientes solicitudes del post."
+			},
+			"response": []
+		},
+		{
+			"name": "creacion_categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNjgwMiwianRpIjoiNjQ3MDIwYzEtZDQ0Yy00ZTNlLWJmNWQtNmFlMzI3MmM0NTY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA3NzA2ODAyLCJjc3JmIjoiNzkzY2FiNTQtMzgxNC00ZjJiLWFmMzYtYmVmMzFlYzRiNzhlIiwiZXhwIjoxNzA3NzA3NzAyfQ.VsLcNd1UkG1r6TV2VOdfHw-CMQeDkI_5kdEai0nanNY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Tarea 1\",\r\n    \"descripcion\":\"descripcion tarea 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/categorias",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creacion_categoria 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNjgwMiwianRpIjoiNjQ3MDIwYzEtZDQ0Yy00ZTNlLWJmNWQtNmFlMzI3MmM0NTY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA3NzA2ODAyLCJjc3JmIjoiNzkzY2FiNTQtMzgxNC00ZjJiLWFmMzYtYmVmMzFlYzRiNzhlIiwiZXhwIjoxNzA3NzA3NzAyfQ.VsLcNd1UkG1r6TV2VOdfHw-CMQeDkI_5kdEai0nanNY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"nombre\":\"Tarea 2\",\r\n    \"descripcion\":\"descripcion tarea 2\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/categorias",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_de_categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNjgwMiwianRpIjoiNjQ3MDIwYzEtZDQ0Yy00ZTNlLWJmNWQtNmFlMzI3MmM0NTY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA3NzA2ODAyLCJjc3JmIjoiNzkzY2FiNTQtMzgxNC00ZjJiLWFmMzYtYmVmMzFlYzRiNzhlIiwiZXhwIjoxNzA3NzA3NzAyfQ.VsLcNd1UkG1r6TV2VOdfHw-CMQeDkI_5kdEai0nanNY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/categoria/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"categoria",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener categorias",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNjgwMiwianRpIjoiNjQ3MDIwYzEtZDQ0Yy00ZTNlLWJmNWQtNmFlMzI3MmM0NTY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA3NzA2ODAyLCJjc3JmIjoiNzkzY2FiNTQtMzgxNC00ZjJiLWFmMzYtYmVmMzFlYzRiNzhlIiwiZXhwIjoxNzA3NzA3NzAyfQ.VsLcNd1UkG1r6TV2VOdfHw-CMQeDkI_5kdEai0nanNY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"nombre\":\"Tarea 2\",\r\n    \"descripcion\":\"descripcion tarea 2\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/categorias",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creacion tareas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNzgxMiwianRpIjoiYzg0NzZlZTktODMyMy00OGQ3LTg5YjctZTczYzVjOWRjNTI5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzA3NzA3ODEyLCJjc3JmIjoiMDkyYzIxOGEtMmQ1MC00NzMwLWJlMTktMTU1YWJlOWMzYWI3IiwiZXhwIjoxNzA3NzA4NzEyfQ.8QVg-bByQFkoURhGTebjrtER4C_iTy_uR4E80_ux4Z0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\"texto_task\": \"Prueba  1\",\r\n\"fecha_creacion\": \"01/01/2021\",\r\n\"fecha_finalizacion\":\"01/01/2022\",\r\n\"estado\":\"Sin empezar\", \r\n\"id_categoria\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tareas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creacion tareas 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNzgxMiwianRpIjoiYzg0NzZlZTktODMyMy00OGQ3LTg5YjctZTczYzVjOWRjNTI5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzA3NzA3ODEyLCJjc3JmIjoiMDkyYzIxOGEtMmQ1MC00NzMwLWJlMTktMTU1YWJlOWMzYWI3IiwiZXhwIjoxNzA3NzA4NzEyfQ.8QVg-bByQFkoURhGTebjrtER4C_iTy_uR4E80_ux4Z0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"texto_task\": \"Prueba  2\",\r\n\"fecha_creacion\": \"01/01/2021\",\r\n\"fecha_finalizacion\":\"01/01/2022\",\r\n\"estado\":\"Sin empezar\", \r\n\"id_categoria\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tareas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar tarea",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNzgxMiwianRpIjoiYzg0NzZlZTktODMyMy00OGQ3LTg5YjctZTczYzVjOWRjNTI5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzA3NzA3ODEyLCJjc3JmIjoiMDkyYzIxOGEtMmQ1MC00NzMwLWJlMTktMTU1YWJlOWMzYWI3IiwiZXhwIjoxNzA3NzA4NzEyfQ.8QVg-bByQFkoURhGTebjrtER4C_iTy_uR4E80_ux4Z0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"texto_task\": \"Prueba  actualizada\",\r\n\"fecha_creacion\": \"01/01/2021\",\r\n\"fecha_finalizacion\":\"01/01/2022\",\r\n\"estado\":\"Sin empezar\", \r\n\"id_categoria\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tarea/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tarea",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tarea",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNjgwMiwianRpIjoiNjQ3MDIwYzEtZDQ0Yy00ZTNlLWJmNWQtNmFlMzI3MmM0NTY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA3NzA2ODAyLCJjc3JmIjoiNzkzY2FiNTQtMzgxNC00ZjJiLWFmMzYtYmVmMzFlYzRiNzhlIiwiZXhwIjoxNzA3NzA3NzAyfQ.VsLcNd1UkG1r6TV2VOdfHw-CMQeDkI_5kdEai0nanNY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"nombre\":\"Tarea 2\",\r\n    \"descripcion\":\"descripcion tarea 2\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tarea/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tarea",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tareas por usuario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwODc2NiwianRpIjoiNDY5MDA1ZTEtYjJhZC00ODczLWJkNjUtMjVlNTlkNTlmMjU5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzA3NzA4NzY2LCJjc3JmIjoiYzk5NjNmMWItM2ZmYy00OTcwLTg5ZGYtMTVmYTVlYmFiZmFhIiwiZXhwIjoxNzA3NzA5NjY2fQ.FUAFz7AJEk2e6ixohlDqTg5CUY0dIlhonZGJkq4_BCc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"nombre\":\"Tarea 2\",\r\n    \"descripcion\":\"descripcion tarea 2\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/usuario/2/tarea",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"usuario",
+						"2",
+						"tarea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarea por id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzcwNjgwMiwianRpIjoiNjQ3MDIwYzEtZDQ0Yy00ZTNlLWJmNWQtNmFlMzI3MmM0NTY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA3NzA2ODAyLCJjc3JmIjoiNzkzY2FiNTQtMzgxNC00ZjJiLWFmMzYtYmVmMzFlYzRiNzhlIiwiZXhwIjoxNzA3NzA3NzAyfQ.VsLcNd1UkG1r6TV2VOdfHw-CMQeDkI_5kdEai0nanNY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"nombre\":\"Tarea 2\",\r\n    \"descripcion\":\"descripcion tarea 2\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/categorias",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
